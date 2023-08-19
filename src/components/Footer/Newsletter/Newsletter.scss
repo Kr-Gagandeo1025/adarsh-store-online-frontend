@@ -1,0 +1,97 @@
+@import "../../../css-config/mixins.scss";
+.contact-form{
+    flex-direction: column;
+    width:100%;
+    height:600px;
+    display: flex;
+    align-items: center;
+    background: #f9f9f9 url("../../../assets/newsletter-bg.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    @include md{
+        height: 400px;
+    }
+    .small-letter{
+        padding:20px;
+        text-align: center;
+        font-size: 26px;
+        color: white;
+        background-color: black;
+        font-weight: 800;
+        width:100%;
+    }
+    .contact-form-content{
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        justify-content: space-between;
+        @include md{
+            flex-direction: row;
+        }
+
+        .form-area1{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin:40px;
+            .big-text{
+                padding:10px;
+                color:white;
+                background-color: black;
+                font-size: 30px;
+                text-transform: uppercase;
+                @include md{
+                    font-size: 40px;
+                }
+            }
+            .email-input{
+                background-color: white;
+                border-radius: 10px;
+                margin:20px 10px;
+                width:300px;
+                @include md{
+                    width:400px;
+                }
+            }
+            .text-input{
+                background-color: white;
+                border-radius: 10px;
+                margin:20px 10px;
+                width:300px;
+                @include md{
+                    width:400px;
+                }
+            }
+            .send-btn{
+                gap:10px;
+                background-color: black;
+            }
+        }
+        .extra-contact-icons{
+            .icon{
+                padding:10px;
+                border-radius: 100%;
+                cursor: pointer;
+                background-color: black;
+                color:white;
+                font-size: 40px;
+                margin:10px 10px;
+                @include md{
+                    margin:30px 10px
+                }
+            }
+            display: flex;
+            flex-direction: column;
+            margin:40px;
+            .contact-det{
+                color: white;
+                background-color: black;
+            }
+        }
+    }
+}
+

@@ -1,0 +1,104 @@
+@import "../../../css-config/mixins.scss";
+.banner-main{
+    padding:40px 0;
+    position: relative;
+    background: linear-gradient(to right, rgb(231, 91, 91), rgb(240, 186, 87));
+    @include lg{
+        height: calc(100vh - 80px);
+    }
+    .content{
+        height: 100%;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: flex-end;
+        align-items: center;
+        margin:0 auto;
+        @include lg{
+            flex-direction: row;
+            max-width: 1200px;
+        }
+        .banner-img{
+            position:relative;
+            z-index: 9;
+            width: 300px;
+            margin-bottom:10px;
+            @include lg{
+                width:700px;
+                margin-top: 50px;
+                margin-right: 60px;
+                margin-bottom: 0;
+            }
+            @include xxl{
+                width:800px;
+                margin-top: 0px;
+                margin-right: 0px;
+            }
+        }
+        .text-content{
+            display: flex;
+            flex-direction: column;
+            color:white;
+            text-align: center;
+            align-items: center;
+            @include lg{
+                position: absolute;
+                left: 50px;
+                top:50%;
+                transform: translateY(-50%);
+            }
+            @include xxl{
+                left: 0;
+            }
+            h1{
+                font-size: 70px;
+                font-weight: 700;
+                line-height: 1;
+                margin-bottom: 20px;
+                background-image: url("https://img.freepik.com/free-photo/sacks-healthy-legumes-grains_53876-65444.jpg?w=900&t=st=1691044992~exp=1691045592~hmac=379f0f6c30b6786269547e97455b04078f69e2e9f0fac42e6aaecc3cd991428c") ;
+                background-repeat:no-repeat;
+                background-size: 100%;
+                background-clip: border-box;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                @include lg{
+                    font-size: 80px;
+                }
+            }
+            p{
+                font-weight: 600;
+                font-size: 14px;
+                max-width: 300px;
+                line-height: 20px;
+                margin-bottom: 20px;
+                @include lg{
+                    max-width: 500px;
+                    font-size: 20px;
+                    line-height: 24px;
+                    margin-bottom: 40px;
+                }
+            }
+            .ctas{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+                .ctas-icon{
+                    font-size: 40px;
+                }
+                .insta:hover{
+                    transition-duration: 0.5s;
+                    color: red;
+                }
+                .facebook:hover{
+                    transition-duration: 0.5s;
+                    color: blue;
+                }
+                .whatsapp:hover{
+                    transition-duration: 0.5s;
+                    color: green;
+                }
+            }
+        }
+    }
+}
+

@@ -1,0 +1,102 @@
+@import "../../css-config/mixins.scss";
+.main-header{
+    width:100%;
+    padding:0 20px;
+    background-color: rgb(59, 25, 25);
+    color:white;
+    border-bottom: 4px solid rgba(0,0,0,0.5);
+    z-index:99;
+    @include lg{
+        padding: 0 40px;
+    }
+    .header-content{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 50px;
+        max-width: 1200px;
+        margin: 0 auto;
+        @include lg{
+            height: 80px;
+        }
+        .header-left{
+            display: none;
+            list-style-type: none;
+            justify-content: space-between;
+            gap: 25px;
+            @include lg{
+                display: flex;
+                list-style-type: none;
+                justify-content: space-between;
+                gap: 25px;
+            }
+            li{
+                text-decoration: underline;
+                text-underline-offset: -100px;
+                font-size: 14px;
+                font-weight: 600;
+                text-transform: uppercase;
+                cursor: pointer;
+            }
+            li:hover{
+                transition-duration: 0.5s;
+                letter-spacing: 2px;
+                text-decoration: underline;
+                text-underline-offset: 1px;
+            }
+        }
+        .header-logo-center{
+            font-size: 28px;
+            font-weight: 800;
+            cursor: pointer;
+            @include lg{
+                font-size: 34px;
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+        .header-right-icons{
+            display:flex;
+            align-items:center;
+            justify-content: space-between;
+            gap: 10px;
+            @include lg{
+                gap:25px;
+            }
+            .MuiSvgIcon-root{
+                font-size: 24px;
+                cursor:pointer;
+                @include lg{
+                    font-size: 30px;
+                }
+            }
+            .cart-icon{
+                position: relative;
+                span{
+                    min-width: 15px;
+                    text-align: center;
+                    background-color: rgb(161, 10, 10);
+                    padding: 1px;
+                    position: absolute;
+                    top: 10px;
+                    right: -4px;
+                    font-size: 12px;
+                    line-height: 1;
+                    border-radius: 10px;
+                }
+            }
+        }
+    }
+    &.stickey-header{
+        position: sticky;
+        top:0;
+        transform: translateY(-50px);
+        animation:stickey-header 0.5s ease forwards;
+    }
+}
+
+@keyframes stickey-header {
+    0%{transform: translateY(-50px);}
+    100%{transform: translateY(0px);}
+}
