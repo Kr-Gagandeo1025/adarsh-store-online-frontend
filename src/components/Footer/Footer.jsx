@@ -2,7 +2,7 @@ import { Email, LocationOn,  Payments, Phone, QrCodeScanner } from "@mui/icons-m
 import "./Footer.scss";
 const Footer = () => {
     return(
-       <div className="footer">
+       <div className="footer" id="about">
             <div className="footer-content">
                 <div className="col">
                     <div className="title">About</div>

@@ -33,7 +33,7 @@
             li{
                 text-decoration: underline;
                 text-underline-offset: -100px;
-                font-size: 14px;
+                font-size: 16px;
                 font-weight: 600;
                 text-transform: uppercase;
                 cursor: pointer;
@@ -43,6 +43,10 @@
                 letter-spacing: 2px;
                 text-decoration: underline;
                 text-underline-offset: 1px;
+            }
+            .link{
+                text-decoration: none;
+                color:inherit;
             }
         }
         .header-logo-center{

@@ -1,8 +1,9 @@
 import "./Product.scss";
-import img1 from "../../../assets/products/ashirwaad_atta.png"
+import { useNavigate } from "react-router-dom";
 const Product = ({id,data}) => {
+    const Navigate = useNavigate();
     return(
-        <div className="product-card">
+        <div className="product-card" onClick={()=>Navigate("/product/"+id)}>
             <div className="thumb-img">
                 <img src={
                     process.env.REACT_APP_DEV_URL + data.img.data[0].attributes.url

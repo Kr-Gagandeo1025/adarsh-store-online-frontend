@@ -3,7 +3,7 @@ import "./Newsletter.scss";
 import { Email, Facebook, Instagram, Phone, WhatsApp } from "@mui/icons-material";
 const Newsletter = () => {
     return (
-        <div className="contact-form">
+        <div className="contact-form" id="contact-us">
             <span className="small-letter">CONTACT US</span>
             <div className="contact-form-content">
                 <div className="form-area1">
